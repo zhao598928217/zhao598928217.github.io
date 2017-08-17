@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-angular鍩虹2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/11/02/angular鍩虹2/" class="article-date">
+  <time datetime="2015-11-02T04:49:47.000Z" itemprop="datePublished">2015-11-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/02/angular鍩虹2/">angular基础2</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>jqLite 自定义指令<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">myApp.directive(<span class="string">'myDir'</span>,[<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">   link:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">       <span class="keyword">return</span> &#123;</div><div class="line"></div><div class="line">       &#125;</div><div class="line">   &#125;</div><div class="line">   &#125;])</div></pre></td></tr></table></figure></p>
+</blockquote>
+        
+          <p class="article-more-link">
+            <a href="/2015/11/02/angular鍩虹2/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/11/02/angular鍩虹2/" data-id="cj6gduoon0007ysnt2qc23pc7" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angular/">angular</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/框架/">框架</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-angular鍩虹1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/11/01/angular鍩虹1/" class="article-date">
+  <time datetime="2015-11-01T05:55:56.000Z" itemprop="datePublished">2015-11-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/01/angular鍩虹1/">angular基础1</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- MarkdownTOC -->
+<ul>
+<li>1.控制器中的$scope为什么不能改成其他的名字</li>
+<li>2.安全的方式创建控制器</li>
+<li>3.Angular常用指令</li>
+<li>4.练习：在点击提交按钮后将选中项找出来</li>
+<li>5.面向对象的方式创建控制器</li>
+<li>6.创建服务</li>
+<li>7.服务的作用</li>
+<li>8.AngularJS Batarang Chrome开发调试工具</li>
+<li>9.作用域补充</li>
+</ul>
+<!-- /MarkdownTOC -->
+<h3 id="1-控制器中的-scope为什么不能改成其他的名字"><a href="#1-控制器中的-scope为什么不能改成其他的名字" class="headerlink" title="1.控制器中的$scope为什么不能改成其他的名字"></a>1.控制器中的$scope为什么不能改成其他的名字</h3><h3 id="2-安全的方式创建控制器"><a href="#2-安全的方式创建控制器" class="headerlink" title="2.安全的方式创建控制器"></a>2.安全的方式创建控制器</h3><h3 id="3-Angular常用指令"><a href="#3-Angular常用指令" class="headerlink" title="3.Angular常用指令"></a>3.Angular常用指令</h3><ul>
+<li>指令分类:内置指令(普通指令、事件指令) 自定义指令</li>
+<li>普通指令<ul>
+<li>ng-repeat 遍历数据</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">ng-app</span>=<span class="string">"myApp"</span> <span class="attr">ng-controller</span>=<span class="string">"demoCtrl"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h4</span>&gt;</span>遍历 一维数组<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">        <span class="comment">&lt;!--</span></div><div class="line"><span class="comment">            ng-repeat 遍历数据 类似于for in 循环</span></div><div class="line"><span class="comment">            in 是固定写法</span></div><div class="line"><span class="comment">            in 后面加上要遍历的数据</span></div><div class="line"><span class="comment">            item 是遍历的当前项(item这个词可以随意写)</span></div><div class="line"><span class="comment">            这个指令可以加在任何标签上</span></div><div class="line"><span class="comment">        --&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">ng-repeat</span>=<span class="string">"item in data"</span>&gt;</span></div><div class="line">            &#123;&#123;item&#125;&#125;</div><div class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">hr</span> /&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">h4</span>&gt;</span>遍历 数组中混合对象<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">ng-repeat</span>=<span class="string">"item in person"</span>&gt;</span>&#123;&#123;item.name&#125;&#125; &#123;&#123;item.age&#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">hr</span> /&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">h4</span>&gt;</span>遍历 对象<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!--</span></div><div class="line"><span class="comment">        key代表对象的键值</span></div><div class="line"><span class="comment">        val代表对象键值对应的值</span></div><div class="line"><span class="comment">    --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">ng-repeat</span>=<span class="string">"(key,val) in obj"</span>&gt;</span></div><div class="line">        &#123;&#123;key&#125;&#125; &#123;&#123;val&#125;&#125;</div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"node_modules/angular/angular.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">        angular.module(<span class="string">'myApp'</span>,[])</span></div><div class="line"><span class="javascript">            .controller(<span class="string">'demoCtrl'</span>,[<span class="string">'$scope'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$scope</span>)</span>&#123;</span></div><div class="line"><span class="undefined"></span></div><div class="line"><span class="javascript">                <span class="comment">// 一维数组</span></span></div><div class="line"><span class="javascript">                $scope.data = [<span class="string">'小明'</span>,<span class="string">'小红'</span>,<span class="string">'小黑'</span>,<span class="string">'小琴'</span>];</span></div><div class="line"><span class="undefined"></span></div><div class="line"><span class="javascript">                <span class="comment">// 数组中混合对象(最常用的形式)</span></span></div><div class="line"><span class="undefined">                $scope.person = [</span></div><div class="line"><span class="javascript">                    &#123;<span class="attr">name</span>:<span class="string">'小明'</span>,<span class="attr">age</span>:<span class="number">18</span>&#125;,</span></div><div class="line"><span class="javascript">                    &#123;<span class="attr">name</span>:<span class="string">'小红'</span>,<span class="attr">age</span>:<span class="number">28</span>&#125;,</span></div><div class="line"><span class="javascript">                    &#123;<span class="attr">name</span>:<span class="string">'小红'</span>,<span class="attr">age</span>:<span class="number">28</span>&#125;,</span></div><div class="line"><span class="javascript">                    &#123;<span class="attr">name</span>:<span class="string">'小黑'</span>,<span class="attr">age</span>:<span class="number">38</span>&#125;,</span></div><div class="line"><span class="javascript">                    &#123;<span class="attr">name</span>:<span class="string">'小琴'</span>,<span class="attr">age</span>:<span class="number">48</span>&#125;</span></div><div class="line"><span class="undefined">                ]</span></div><div class="line"><span class="undefined"></span></div><div class="line"><span class="javascript">                <span class="comment">// 对象</span></span></div><div class="line"><span class="undefined">                $scope.obj = &#123;</span></div><div class="line"><span class="javascript">                    name:<span class="string">'小明'</span>,</span></div><div class="line"><span class="undefined">                    age:35,</span></div><div class="line"><span class="javascript">                    hobby : <span class="string">'吃饭'</span></span></div><div class="line"><span class="undefined">                &#125;</span></div><div class="line"><span class="undefined"></span></div><div class="line"><span class="undefined">            &#125;])</span></div><div class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure>
+        
+          <p class="article-more-link">
+            <a href="/2015/11/01/angular鍩虹1/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/11/01/angular鍩虹1/" data-id="cj6gduook0005ysnti7hkfq9m" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angular/">angular</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/框架/">框架</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-浜嬩欢濮旀墭" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/10/13/浜嬩欢濮旀墭/" class="article-date">
+  <time datetime="2015-10-13T08:42:43.000Z" itemprop="datePublished">2015-10-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/10/13/浜嬩欢濮旀墭/">事件委托</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>js中的事件委托或是事件代理详解</p>
+<p>概述：</p>
+<blockquote>
+<p>事件委托呢？也叫事件代理<br>JavaScript高级程序设计上讲：事件委托就是利用事件冒泡，只指定一个事件处理程序，就可以管理某一类型的所有事件。<br>
+        
+          <p class="article-more-link">
+            <a href="/2015/10/13/浜嬩欢濮旀墭/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/10/13/浜嬩欢濮旀墭/" data-id="cj6gduopu000xysntugq7ibwh" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-姝ｅ垯鍩虹" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/04/26/姝ｅ垯鍩虹/" class="article-date">
+  <time datetime="2015-04-26T11:46:15.000Z" itemprop="datePublished">2015-04-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/04/26/姝ｅ垯鍩虹/">正则基础</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>正则表达式：</p>
+<blockquote>
+<p>创建</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> reg = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="regexp">/\d/</span>,g);</div><div class="line"><span class="keyword">var</span> reg2 = <span class="regexp">/\d/g</span>;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>元字符</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">正则</th>
+<th style="text-align:left">意思</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">.</td>
+<td style="text-align:left">除了换行和回车之外的任意字符[^\n\r]</td>
+</tr>
+<tr>
+<td style="text-align:left">\d</td>
+<td style="text-align:left">数字[0-9]</td>
+</tr>
+<tr>
+<td style="text-align:left">\D</td>
+<td style="text-align:left">非数字</td>
+</tr>
+<tr>
+<td style="text-align:left">\w</td>
+<td style="text-align:left">单词字符[0-9a-zA-Z]</td>
+</tr>
+<tr>
+<td style="text-align:left">\W</td>
+<td style="text-align:left">非单词字符[^0-9a-zA-Z]</td>
+</tr>
+<tr>
+<td style="text-align:left">\s</td>
+<td style="text-align:left">空格,不可见字符[\n\f\r\t\v]</td>
+</tr>
+<tr>
+<td style="text-align:left">\S</td>
+<td style="text-align:left">可见字符</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>边界</p>
+</blockquote>
+<p>  ^ 写在//里面，表示开始<br>    写在[]里面表示取反</p>
+<blockquote>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/04/26/姝ｅ垯鍩虹/" data-id="cj6gduopx0011ysntyxdfu2b3" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-ajax" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/04/03/ajax/" class="article-date">
+  <time datetime="2015-04-03T15:14:00.000Z" itemprop="datePublished">2015-04-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/04/03/ajax/">jsonp实现原理+3种跨域解决方案</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>1.jsonp,实现跨域</p>
+<p>原理：<br>1、浏览器的同源策略，使用XMLHTTPRequest对象进行的跨域请求会被浏览器默认截断。<br>  同源：协议+域名+端口，三者完全一致为同源<br>  <a href="https://www.baidu.com:8080/home/index.html?key1=value1&amp;key2=value2#hash" target="_blank" rel="external">https://www.baidu.com:8080/home/index.html?key1=value1&amp;key2=value2#hash</a><br>  https:协议<br>  www.baidu.com:域名<br>  8080:端口号<br>  home/index:路径<br>  ?key=value:参数</p>
+<p>  #hash:哈希值<br>2、html的一些标签中src属性也可以发送请求，相当于发送了一个get请求。而src属性中书写的地址，发送出去的请求，是不会受到浏览器截断的<br>3、动态生成一个script标签，将这个script标签的src属性的值设为请求的URL，将这个script标签添加到页面中之后，src属性会自动向URL发送一个get请求，然后，后台返回一段特殊格式的字符串，返回到页面中，这段字符串就变成了一段函数调用的js代码.</p>
+</blockquote>
+<p><img src="assets/blogImg/域名.png" alt="域名"></p>
+<p><img src="assets/blogImg/location.png" alt="location"></p>
+        
+          <p class="article-more-link">
+            <a href="/2015/04/03/ajax/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/04/03/ajax/" data-id="cj6gduood0001ysnt58nohimi" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Javascript/">Javascript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-http鍗忚+cookie+session" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/03/14/http鍗忚+cookie+session/" class="article-date">
+  <time datetime="2015-03-14T13:09:00.000Z" itemprop="datePublished">2015-03-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/03/14/http鍗忚+cookie+session/">http协议+cookie+session</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>http 是什么？：HyperText Transfer Protocal 超文本传输协议<br>http协议的作用：主要用作：浏览器与服务器之间的数据传输<br>http协议是无状态的！</p>
+</blockquote>
+<p>服务器并不会记住浏览器的状态，每一次请求，服务器都会认为是一个新的浏览器在访问服务器！</p>
+<blockquote>
+<p> 无状态的问题需要解决，否则： 登陆的效果就没法实现！</p>
+</blockquote>
+<ul>
+<li>通过cookie与session配合就可以解决</li>
+<li>令牌机制<br>cookie</li>
+</ul>
+<blockquote>
+<p> 概念：浏览器端带有的存储空间</p>
+</blockquote>
+        
+          <p class="article-more-link">
+            <a href="/2015/03/14/http鍗忚+cookie+session/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/03/14/http鍗忚+cookie+session/" data-id="cj6gduoox000cysntck5bk7am" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-鐩存帴浣跨敤file鍗忚鎵撳紑鏂囦欢" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/03/04/鐩存帴浣跨敤file鍗忚鎵撳紑鏂囦欢/" class="article-date">
+  <time datetime="2015-03-04T13:34:00.000Z" itemprop="datePublished">2015-03-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/03/04/鐩存帴浣跨敤file鍗忚鎵撳紑鏂囦欢/">直接使用file协议打开文件</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">$.ajax(&#123;</div><div class="line">           url: <span class="string">"./06-side.html"</span>,</div><div class="line">           success: <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</div><div class="line">               <span class="built_in">console</span>.log(data);</div><div class="line">           &#125;</div><div class="line">       &#125;);</div><div class="line"></div><div class="line">       <span class="comment">//安装live-server</span></div><div class="line"></div><div class="line">       <span class="comment">//要求，npm</span></div><div class="line"></div><div class="line">       <span class="comment">//cnpm install live-server -g</span></div><div class="line"></div><div class="line"></div><div class="line">       <span class="comment">//直接在命令行中输入 live-server</span></div><div class="line"></div><div class="line">       <span class="comment">//会将当前文件目录 作为 网站跟目录，启动一个简易的http服务器！！</span></div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/03/04/鐩存帴浣跨敤file鍗忚鎵撳紑鏂囦欢/" data-id="cj6gduoq20018ysntus2v2bjj" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-涓ユ牸妯″紡-use-strict" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/07/27/涓ユ牸妯″紡-use-strict/" class="article-date">
+  <time datetime="2014-07-27T10:51:30.000Z" itemprop="datePublished">2014-07-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/07/27/涓ユ牸妯″紡-use-strict/">严格模式 -&#39;use strict&#39;</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Javascript 严格模式详解<br>作者： 阮一峰<br>日期： 2013年1月14日</p>
+<blockquote>
+<p>一、概述</p>
+</blockquote>
+<p>除了正常运行模式，ECMAscript 5添加了第二种运行模式：”严格模式”（strict mode）。顾名思义，这种模式使得Javascript在更严格的条件下运行。</p>
+<p>设立”严格模式”的目的，主要有以下几个：<br>　　- 消除Javascript语法的一些不合理、不严谨之处，减少一些怪异行为;<br>　　- 消除代码运行的一些不安全之处，保证代码运行的安全；<br>　　- 提高编译器效率，增加运行速度；<br>　　- 为未来新版本的Javascript做好铺垫。<br>“严格模式”体现了Javascript更合理、更安全、更严谨的发展方向，包括IE 10在内的主流浏览器，都已经支持它，许多大项目已经开始全面拥抱它。<br>另一方面，同样的代码，在”严格模式”中，可能会有不一样的运行结果；一些在”正常模式”下可以运行的语句，在”严格模式”下将不能运行。掌握这些内容，有助于更细致深入地理解Javascript，让你变成一个更好的程序员。<br>本文将对”严格模式”做详细介绍。</p>
+        
+          <p class="article-more-link">
+            <a href="/2014/07/27/涓ユ牸妯″紡-use-strict/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2014/07/27/涓ユ牸妯″紡-use-strict/" data-id="cj6gduopt000wysntq4wjj74b" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    <a class="extend prev" rel="prev" href="/">&laquo; __('prev')</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Mot-clés</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CKeditor/">CKeditor</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/">Javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ajax/">ajax</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/angular/">angular</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/form-validate/">form-validate</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jquery/">jquery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/">npm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具/">工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/插件/">插件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/框架/">框架</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/模板引擎/">模板引擎</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/进度条/">进度条</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/CKeditor/" style="font-size: 10px;">CKeditor</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/ajax/" style="font-size: 10px;">ajax</a> <a href="/tags/angular/" style="font-size: 13.33px;">angular</a> <a href="/tags/form-validate/" style="font-size: 10px;">form-validate</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/工具/" style="font-size: 10px;">工具</a> <a href="/tags/插件/" style="font-size: 16.67px;">插件</a> <a href="/tags/框架/" style="font-size: 13.33px;">框架</a> <a href="/tags/模板引擎/" style="font-size: 10px;">模板引擎</a> <a href="/tags/进度条/" style="font-size: 10px;">进度条</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Articles récents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/08/11/ejs妯℃澘寮曟搸/">ejs模板引擎</a>
+          </li>
+        
+          <li>
+            <a href="/2016/12/01/webpack/">webpack</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/07/node-js浠嬬粛/">node.js介绍</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/06/template妯℃澘寮曟搸/">template模板引擎</a>
+          </li>
+        
+          <li>
+            <a href="/2016/09/26/CKeditor/">CKeditor富文本插件</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

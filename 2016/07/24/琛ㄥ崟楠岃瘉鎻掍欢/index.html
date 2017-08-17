@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>表单验证插件 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="表单验证插件validate，本案例是jquery插件git@github.com:DiegoLopesLima/validate.git  1234567891011// 条件验证，在表单元素中加入一个属性：data-conditional:“isAdult”，这个属性值是，validate（）的对象参数conditional的属性名//在validate的参数中，传入一个参数：参数是对象，对">
+<meta name="keywords" content="form-validate">
+<meta property="og:type" content="article">
+<meta property="og:title" content="表单验证插件">
+<meta property="og:url" content="http://yoursite.com/2016/07/24/琛ㄥ崟楠岃瘉鎻掍欢/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="表单验证插件validate，本案例是jquery插件git@github.com:DiegoLopesLima/validate.git  1234567891011// 条件验证，在表单元素中加入一个属性：data-conditional:“isAdult”，这个属性值是，validate（）的对象参数conditional的属性名//在validate的参数中，传入一个参数：参数是对象，对">
+<meta property="og:updated_time" content="2017-07-26T01:20:08.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="表单验证插件">
+<meta name="twitter:description" content="表单验证插件validate，本案例是jquery插件git@github.com:DiegoLopesLima/validate.git  1234567891011// 条件验证，在表单元素中加入一个属性：data-conditional:“isAdult”，这个属性值是，validate（）的对象参数conditional的属性名//在validate的参数中，传入一个参数：参数是对象，对">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-琛ㄥ崟楠岃瘉鎻掍欢" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/07/24/琛ㄥ崟楠岃瘉鎻掍欢/" class="article-date">
+  <time datetime="2016-07-24T03:31:51.000Z" itemprop="datePublished">2016-07-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      表单验证插件
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>表单验证插件validate，本案例是jquery插件<br>git@github.com:DiegoLopesLima/validate.git</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 条件验证，在表单元素中加入一个属性：data-conditional:“isAdult”，这个属性值是，validate（）的对象参数conditional的属性名</span></div><div class="line"><span class="comment">//在validate的参数中，传入一个参数：参数是对象，对象名conditional，对象中的键值对，值都是返回值为布尔类型的函数。函数需要传入一个参数，这个参数是正在验证的input元素的value值</span></div><div class="line"> data-description：制定当前表单项，在验证通过呢或者不通过，</div><div class="line"> data-descrip设置当前表单提示项的位置</div><div class="line">$(<span class="string">"form"</span>).validate(&#123;</div><div class="line">    conditional:&#123;</div><div class="line">        isAdult:<span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</div><div class="line"></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    &#125;)</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">""</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">""</span>&gt;</span>用户名<span class="tag">&lt;/<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"name"</span> <span class="attr">data-trim</span> <span class="attr">data-required</span> <span class="attr">data-conditional</span>=<span class="string">"isShuaige"</span> <span class="attr">data-description</span>=<span class="string">"name"</span> <span class="attr">data-describedby</span>=<span class="string">"msg-name"</span>&gt;</span> <span class="tag">&lt;<span class="name">label</span> <span class="attr">id</span>=<span class="string">"msg-name"</span>&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">""</span>&gt;</span>手机号码<span class="tag">&lt;/<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"phone"</span> <span class="attr">data-required</span> <span class="attr">data-pattern</span>=<span class="string">"^\d&#123;11&#125;$"</span> <span class="attr">data-description</span>=<span class="string">"phone"</span> <span class="attr">data-describedby</span>=<span class="string">"msg-phone"</span>&gt;</span> <span class="tag">&lt;<span class="name">label</span> <span class="attr">id</span>=<span class="string">"msg-phone"</span>&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">""</span>&gt;</span>年龄<span class="tag">&lt;/<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"age"</span> <span class="attr">data-conditional</span>=<span class="string">"isAdult"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">button</span>&gt;</span>提交<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>需要指定表单的验证规则，就得给表单元素添加对应的data-属性</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span> data-required:   设置当前表单项为必填项</div><div class="line"><span class="number">2.</span> data-trim：  验证的时候是否要去掉两边的空格(提交数据的时候，空格并不会被去掉)</div><div class="line"><span class="number">3.</span> data-pattern:  指定正则表达式（不用加两边的/），来测试表单的值是否能够通过验证</div><div class="line"><span class="number">4.</span> data-conditional: 指定条件验证的条件函数的名称，   条件其实就是<span class="function"><span class="keyword">function</span></span></div><div class="line"><span class="function">   在表单验证的时候，会自动调用这个函数，函数的返回值如果是<span class="title">true</span>则通过验证，否则不通过</span></div><div class="line"><span class="function">   条件验证找函数是去  <span class="title">validate</span> 方法的参数对象中找 <span class="title">conditional</span>对象</span></div><div class="line"><span class="function">   在<span class="title">conditional</span>对象中找名字相同的<span class="title">function</span></span></div><div class="line"><span class="function">5. <span class="title">data</span>-<span class="title">description</span>: 指定当前表单项，在验证通过或者不通过的时候的提示信息，这里指定的是一个对象的名称</span></div><div class="line"><span class="function">   这个对象是 在<span class="title">validate</span> 方法的参数对象中找 <span class="title">description</span> 对象中对应的名称的对象</span></div><div class="line"><span class="function">6. <span class="title">data</span>-<span class="title">describedby</span>: 设置当前表单项的提示信息的显示位置</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"form"</span>).validate(&#123;</div><div class="line">    description: &#123;</div><div class="line">        name: &#123;</div><div class="line">            valid: <span class="string">"姓名填写正确"</span>,</div><div class="line">            required: <span class="string">"请输入姓名"</span>,</div><div class="line">            conditional: <span class="string">"您输入的不是帅哥！"</span>,</div><div class="line">        &#125;,</div><div class="line">        phone: &#123;</div><div class="line">            valid: <span class="string">"这个电话号码不错哦~"</span>,</div><div class="line">            required: <span class="string">"没电话我怎么联系你呢~~~"</span>,</div><div class="line">            pattern: <span class="string">"这个电话号码不对，你是想忽悠我么？"</span></div><div class="line">        &#125;</div><div class="line">    &#125;,</div><div class="line">    conditional: &#123;</div><div class="line">        isShuaige: <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</div><div class="line">            <span class="comment">//value,就是当前正在验证的表单项的value值</span></div><div class="line">            <span class="comment">// console.log(value);</span></div><div class="line">            <span class="comment">//该函数必须包含一个布尔值返回值</span></div><div class="line"></div><div class="line">            <span class="comment">// if(value == "张学路")&#123;</span></div><div class="line">            <span class="comment">//     return false;</span></div><div class="line">            <span class="comment">// &#125;</span></div><div class="line">            <span class="keyword">return</span> value == <span class="string">"张学路"</span></div><div class="line">        &#125;,</div><div class="line">        isAdult: <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</div><div class="line">            <span class="keyword">return</span> value &gt;= <span class="number">18</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<blockquote>
+<p>jQuery-validate</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">form</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">data-required</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">jQuery(<span class="string">'form'</span>).validate();</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'form'</span>).validate(&#123;</div><div class="line">    description : &#123;</div><div class="line">        test : &#123;</div><div class="line">            required : <span class="string">'&lt;div class="error"&gt;Required&lt;/div&gt;'</span>,</div><div class="line">            pattern : <span class="string">'&lt;div class="error"&gt;Pattern&lt;/div&gt;'</span>,</div><div class="line">            conditional : <span class="string">'&lt;div class="error"&gt;Conditional&lt;/div&gt;'</span>,</div><div class="line">            valid : <span class="string">'&lt;div class="success"&gt;Valid&lt;/div&gt;'</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<blockquote>
+<p>属性</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">data-reuqired       必填</div><div class="line">data-trim           验证的时候去掉空格</div><div class="line">data-pattern        正则验证</div><div class="line">data-conditional    条件验证</div><div class="line">data-description    描述信息</div><div class="line">data-describedby    描述信息的显示位置（id）</div></pre></td></tr></table></figure>
+<blockquote>
+<p>参数</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span> conditional  一个对象，里面有好多<span class="function"><span class="keyword">function</span>, <span class="title">funciton</span>的返回值为布尔值，当使用<span class="title">data</span>-<span class="title">conditional</span>在元素中指定了<span class="title">function</span>之后，在元素被校验的时候，会调用这个<span class="title">function</span>如果返回的是<span class="title">true</span>则校验通过否则不通过</span></div><div class="line"><span class="function">2. <span class="title">description</span>  一个对象，里面有好对象，对象里面放的是好多提示信息（<span class="title">valid</span>, <span class="title">required</span>, <span class="title">pattern</span>, <span class="title">conditional</span>）</span></div><div class="line"><span class="function">3. <span class="title">sendForm</span>   设置验证成功之后是否提交表单  默认是<span class="title">true</span></span></div><div class="line"><span class="function">4. <span class="title">onBlur</span> <span class="title">onChange</span> <span class="title">onKeyup</span> <span class="title">onSubmit</span>  设置在这些事件发生的时候要不要做验证，只有<span class="title">onSubmit</span>默认是<span class="title">true</span>其他都是<span class="title">false</span></span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>回调<br>这些回调函数，一般用来处理验证通过或不通过，操作DOM元素。<br>DOM元素的响应的样式行为的改变，发送ajax请求</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">valid:   在表单整体通过验证的时候才会触发</div><div class="line">inValid:  在表单整体没有通过验证的时候才会触发</div><div class="line">eachField: 在每个元素进行校验的时候会触发；回调中的<span class="keyword">this</span>是指向这个元素的jquery对象</div><div class="line">eachValidField: 在每个元素进行校验并且通过验证后，才会触发；回调中的<span class="keyword">this</span>是指向这个元素的jquery对象；</div><div class="line">eachInvalidField: 在每个元素进行校验并且没有通过验证后，才会触发；回调中的<span class="keyword">this</span>是指向这个元素的jquery对象</div></pre></td></tr></table></figure>
+<blockquote>
+<p>Attributes</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">th</span> <span class="attr">width</span>=<span class="string">"110px"</span>&gt;</span>Attribute<span class="tag">&lt;/<span class="name">th</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">th</span>&gt;</span>Description<span class="tag">&lt;/<span class="name">th</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">th</span> <span class="attr">width</span>=<span class="string">"75px"</span>&gt;</span>Default<span class="tag">&lt;/<span class="name">th</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>data-conditional<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>Accepts one or more indexes separated by spaces from the `conditional` object that should contain a the boolean return function.<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>data-ignore-case<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>Accepts a boolean value to specify if field is case-insensitive.<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>true<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>data-mask<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>Accepts a mask to change the field value to the specified format. The mask should use the character groups of the regular expression passed to the <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#data-pattern"</span>&gt;</span>`data-pattern`<span class="tag">&lt;/<span class="name">a</span>&gt;</span> attribute.<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>$&#123;0&#125;<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>data-pattern<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>Accepts a regular expression to test the field value.<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>/(?:)/<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>data-prepare<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>Accepts a index from the `prepare` object that should contain a function to receive the field value and returns a new value treated.<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>data-required<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>Accepts a boolean value to specify if field is required.<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>false<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>data-trim<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>Accepts a boolean value. If true, removes the spaces from the ends in the field value. (The field value is not changed)<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>false<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>data-validate<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>You can use the `data-validate` to calling extensions.<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>Parameters</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">th</span> <span class="attr">width</span>=<span class="string">"110px"</span>&gt;</span>Parameter<span class="tag">&lt;/<span class="name">th</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">th</span>&gt;</span>Description<span class="tag">&lt;/<span class="name">th</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">th</span> <span class="attr">width</span>=<span class="string">"75px"</span>&gt;</span>Default<span class="tag">&lt;/<span class="name">th</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>conditional<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>Accepts a object to store functions from validation.<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>filter<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>Accepts a selector string or function to filter the validated fields.<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>*<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>nameSpace<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>A namespace used in all delegates events.<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>validate<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>onBlur<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>Accepts a boolean value. If true, triggers the validation when blur the field.<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>false<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>onChange<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>Accepts a boolean value. If true, triggers the validation when change the field value.<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>false<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>onKeyup<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>Accepts a boolean value. If true, triggers the validation when press any key.<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>false<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>onSubmit<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>Accepts a boolean value. If true, triggers the validation when submit the form.<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>true<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>prepare<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>Accepts a object to store functions to prepare the field values.<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>sendForm<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>Accepts a boolean value. If false, prevents submit the form (Useful to submit forms via <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://api.jquery.com/jQuery.ajax/"</span> <span class="attr">target</span>=<span class="string">"_blank"</span>&gt;</span>AJAX<span class="tag">&lt;/<span class="name">a</span>&gt;</span>).<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>true<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>waiAria<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>Accepts a boolean value. If false, disables <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://www.w3.org/WAI/PF/aria/"</span> <span class="attr">target</span>=<span class="string">"_blank"</span>&gt;</span>WAI-ARIA<span class="tag">&lt;/<span class="name">a</span>&gt;</span>.<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>true<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>Callbacks</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">th</span> <span class="attr">width</span>=<span class="string">"110px"</span>&gt;</span>Callback<span class="tag">&lt;/<span class="name">th</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">th</span>&gt;</span>Description<span class="tag">&lt;/<span class="name">th</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>valid<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>Accepts a function to be calling when form is valid. The context (`this`) is the current verified form and the parameters are respectively `event` and `options`.<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>invalid<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>Accepts a function to be calling when form is invalid. The context (`this`) is the current verified form and the parameters are respectively `event` and `options`.<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>eachField<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>Accepts a function to be calling to each field. The context (`this`) is the current verified field and the parameters are respectively `event`, `status` and `options`.<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>eachInvalidField<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>Accepts a function to be calling when field is invalid. The context (`this`) is the current verified field and the parameters are respectively `event`, `status` and `options`.<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>eachValidField<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>Accepts a function to be calling when field is valid. The context (`this`) is the current verified field and the parameters are respectively `event`, `status` and `options`.<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/07/24/琛ㄥ崟楠岃瘉鎻掍欢/" data-id="cj6gduoq00015ysntkyfmetdj" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/form-validate/">form-validate</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/07/24/nprogress鎻掍欢/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Récent</strong>
+      <div class="article-nav-title">
+        
+          nprogress插件-进度条
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/07/24/ajax璇锋眰-鍏ㄥ眬鍙橀噺/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ancien</strong>
+      <div class="article-nav-title">ajax请求+全局变量</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Mot-clés</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CKeditor/">CKeditor</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/">Javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ajax/">ajax</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/angular/">angular</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/form-validate/">form-validate</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jquery/">jquery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/">npm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具/">工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/插件/">插件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/框架/">框架</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/模板引擎/">模板引擎</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/进度条/">进度条</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/CKeditor/" style="font-size: 10px;">CKeditor</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/ajax/" style="font-size: 10px;">ajax</a> <a href="/tags/angular/" style="font-size: 13.33px;">angular</a> <a href="/tags/form-validate/" style="font-size: 10px;">form-validate</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/工具/" style="font-size: 10px;">工具</a> <a href="/tags/插件/" style="font-size: 16.67px;">插件</a> <a href="/tags/框架/" style="font-size: 13.33px;">框架</a> <a href="/tags/模板引擎/" style="font-size: 10px;">模板引擎</a> <a href="/tags/进度条/" style="font-size: 10px;">进度条</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Articles récents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/08/11/ejs妯℃澘寮曟搸/">ejs模板引擎</a>
+          </li>
+        
+          <li>
+            <a href="/2016/12/01/webpack/">webpack</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/07/node-js浠嬬粛/">node.js介绍</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/06/template妯℃澘寮曟搸/">template模板引擎</a>
+          </li>
+        
+          <li>
+            <a href="/2016/09/26/CKeditor/">CKeditor富文本插件</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

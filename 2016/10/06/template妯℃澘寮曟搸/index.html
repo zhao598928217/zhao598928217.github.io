@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>template模板引擎 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="使用模板引擎的应用场景：  1、动态ajax请求数据，渲染到页面。2、在页面布局中，存在共性模块和布局，可以提取出公共模板，减少维护的数量。  引用模板引擎的步骤  1、引入模板引擎2、写模板3、调用template函数，传入参数：template(“模板id”，要渲染的数据)4、template函数生成字符串，innerHTML赋值渲染到页面">
+<meta name="keywords" content="javascript,模板引擎">
+<meta property="og:type" content="article">
+<meta property="og:title" content="template模板引擎">
+<meta property="og:url" content="http://yoursite.com/2016/10/06/template妯℃澘寮曟搸/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="使用模板引擎的应用场景：  1、动态ajax请求数据，渲染到页面。2、在页面布局中，存在共性模块和布局，可以提取出公共模板，减少维护的数量。  引用模板引擎的步骤  1、引入模板引擎2、写模板3、调用template函数，传入参数：template(“模板id”，要渲染的数据)4、template函数生成字符串，innerHTML赋值渲染到页面">
+<meta property="og:updated_time" content="2017-07-27T04:44:16.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="template模板引擎">
+<meta name="twitter:description" content="使用模板引擎的应用场景：  1、动态ajax请求数据，渲染到页面。2、在页面布局中，存在共性模块和布局，可以提取出公共模板，减少维护的数量。  引用模板引擎的步骤  1、引入模板引擎2、写模板3、调用template函数，传入参数：template(“模板id”，要渲染的数据)4、template函数生成字符串，innerHTML赋值渲染到页面">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-template妯℃澘寮曟搸" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/10/06/template妯℃澘寮曟搸/" class="article-date">
+  <time datetime="2016-10-06T11:02:41.000Z" itemprop="datePublished">2016-10-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      template模板引擎
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>使用模板引擎的应用场景：</p>
+</blockquote>
+<p>1、动态ajax请求数据，渲染到页面。<br>2、在页面布局中，存在共性模块和布局，可以提取出公共模板，减少维护的数量。</p>
+<blockquote>
+<p>引用模板引擎的步骤</p>
+</blockquote>
+<p>1、引入模板引擎<br>2、写模板<br>3、调用template函数，传入参数：template(“模板id”，要渲染的数据)<br>4、template函数生成字符串，innerHTML赋值渲染到页面</p>
+<a id="more"></a>
+<blockquote>
+<p>基本使用语法</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"template-web.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/template"</span> <span class="attr">id</span>=<span class="string">"templateID"</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="xml">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>我叫&#123;&#123;name&#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></div><div class="line"><span class="xml">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>今年&#123;&#123;age&#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></div><div class="line"><span class="undefined"></span></div><div class="line"><span class="javascript"><span class="comment">//这里的&#123;&#123;name&#125;&#125;，&#123;&#123;age&#125;&#125;占位时，这写name，age都是template()函数传入的第二个参数的属性，</span></span></div><div class="line"><span class="javascript"><span class="comment">//template函数传入的参数有2个：1个是模板id，1个是传输的数据，将要参与页面渲染的数据：对象、数组、字符串…… </span></span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> ohtml = template(<span class="string">"templateID"</span>,argsObj);</div><div class="line">$(<span class="string">"div"</span>).html(ohtml);</div><div class="line"></div><div class="line"><span class="comment">// template()函数，有2个参数</span></div><div class="line"><span class="comment">// 第一个参数：模板id</span></div><div class="line"><span class="comment">// 第二个参数：将什么数据渲染进模板，对象、数组、字符串…… </span></div><div class="line"><span class="comment">// template函数调用后得到模板里面内容组成的字符串，将这些字符串赋值给div的innerHTML，div.innerHTML=ohtml，就会生出对应的标签</span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>具体的使用</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj = &#123;</div><div class="line">    name:<span class="string">"hcc"</span>,</div><div class="line">    friends:[</div><div class="line">            &#123;<span class="attr">name</span>:<span class="string">"p1"</span>&#125;,</div><div class="line">            &#123;<span class="attr">name</span>:<span class="string">"p2"</span>&#125;,</div><div class="line">            &#123;<span class="attr">name</span>:<span class="string">"p3"</span>&#125;,</div><div class="line">            &#123;<span class="attr">name</span>:<span class="string">"p4"</span>&#125;,</div><div class="line">            &#123;<span class="attr">name</span>:<span class="string">"p5"</span>&#125;,</div><div class="line">          ]</div><div class="line">        &#125;</div></pre></td></tr></table></figure>
+<p>遍历情况1：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> ohtml = template(<span class="string">"tpl"</span>,obj.friends);</div><div class="line">div.innerHTML = ohtml;</div></pre></td></tr></table></figure></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&#123;&#123;each friends&#125;&#125;</div><div class="line"></div><div class="line">    // $index 获取当前遍历索引</div><div class="line">    // $value 获取当前遍历的值</div><div class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span>第&#123;&#123;$index+1&#125;&#125;个朋友的名字：&#123;&#123;$value&#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line">&#123;&#123;/each&#125;&#125;</div><div class="line"></div><div class="line">或者：</div><div class="line"></div><div class="line">&#123;&#123;each $data  as val index&#125;&#125;</div><div class="line">    // 这里的val、index都是变量，用来接收当前遍历的value值与索引值</div><div class="line">    // val  获取当前遍历的值</div><div class="line">    // index 获取当前遍历的索引值</div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span>第&#123;&#123;index+1&#125;&#125;个朋友的名字：&#123;&#123;val&#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line">&#123;&#123;/each&#125;&#125;</div></pre></td></tr></table></figure>
+<p>遍历情况2：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> ohtml = template(<span class="string">"tpl"</span>,obj);</div><div class="line">div.innerHTML = ohtml;</div></pre></td></tr></table></figure></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&#123;&#123;each $data.friends  as val index&#125;&#125;</div><div class="line">    // $data：传进来的对象</div><div class="line">    // 这里的val、index都是变量，用来接收当前遍历的value值与索引值</div><div class="line">    // val  获取当前遍历的值</div><div class="line">    // index 获取当前遍历的索引值</div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span>第&#123;&#123;index+1&#125;&#125;个朋友的名字：&#123;&#123;val.name&#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line">&#123;&#123;/each&#125;&#125;</div></pre></td></tr></table></figure>
+<p>将html字符串当做html标签进行渲染时，要在之前加上@！如果不加@，字符串会被转义之后当做正常字符串输出。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">td</span>&gt;</span>&#123;&#123;@val.avatar&#125;&#125;<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>语法总结：</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">1、输出：`&#123;&#123;值&#125;&#125;`</div><div class="line">2、循环：`&#123;&#123;each 数组 as v i&#125;&#125; ……&#123;&#123;/each&#125;&#125;`</div><div class="line">        `&#123;&#123;each $data as v i&#125;&#125; ……&#123;&#123;/each&#125;&#125;`</div><div class="line">3、条件：`&#123;&#123;if  条件&#125;&#125;……&#123;&#123;else&#125;&#125;……&#123;&#123;/if&#125;&#125;`</div><div class="line">4、输出html标签：`&#123;&#123;@值&#125;&#125;`</div></pre></td></tr></table></figure>
+<p>I、<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">template("tpl",obj)</div><div class="line">   </div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/template"</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined">    &#123;&#123;each list v i&#125;&#125;</span></div><div class="line"><span class="xml">        <span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;&#123;v&#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></div><div class="line"><span class="undefined">    &#123;&#123;/each&#125;&#125;</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"></div><div class="line">//list是obj的属性，v是遍历list的当前项，i是遍历list的当前项的索引值</div></pre></td></tr></table></figure></p>
+<p>II、<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">template("tpl",obj.list)</div><div class="line">   </div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/template"</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined">    &#123;&#123;each $data v i&#125;&#125;</span></div><div class="line"><span class="xml">        <span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;&#123;v&#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></div><div class="line"><span class="undefined">    &#123;&#123;/each&#125;&#125;</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/template"</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined">    &#123;&#123;each $data&#125;&#125;</span></div><div class="line"><span class="xml">        <span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;&#123;$value&#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></div><div class="line"><span class="undefined">    &#123;&#123;/each&#125;&#125;</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"></div><div class="line">//obj.list===$data</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>子模板 </p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/10/06/template妯℃澘寮曟搸/" data-id="cj6gduopw000zysnt5blapsup" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/模板引擎/">模板引擎</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/10/07/node-js浠嬬粛/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Récent</strong>
+      <div class="article-nav-title">
+        
+          node.js介绍
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/09/26/CKeditor/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ancien</strong>
+      <div class="article-nav-title">CKeditor富文本插件</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Mot-clés</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CKeditor/">CKeditor</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/">Javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ajax/">ajax</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/angular/">angular</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/form-validate/">form-validate</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jquery/">jquery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/">npm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具/">工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/插件/">插件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/框架/">框架</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/模板引擎/">模板引擎</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/进度条/">进度条</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/CKeditor/" style="font-size: 10px;">CKeditor</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/ajax/" style="font-size: 10px;">ajax</a> <a href="/tags/angular/" style="font-size: 13.33px;">angular</a> <a href="/tags/form-validate/" style="font-size: 10px;">form-validate</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/工具/" style="font-size: 10px;">工具</a> <a href="/tags/插件/" style="font-size: 16.67px;">插件</a> <a href="/tags/框架/" style="font-size: 13.33px;">框架</a> <a href="/tags/模板引擎/" style="font-size: 10px;">模板引擎</a> <a href="/tags/进度条/" style="font-size: 10px;">进度条</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Articles récents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/08/11/ejs妯℃澘寮曟搸/">ejs模板引擎</a>
+          </li>
+        
+          <li>
+            <a href="/2016/12/01/webpack/">webpack</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/07/node-js浠嬬粛/">node.js介绍</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/06/template妯℃澘寮曟搸/">template模板引擎</a>
+          </li>
+        
+          <li>
+            <a href="/2016/09/26/CKeditor/">CKeditor富文本插件</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

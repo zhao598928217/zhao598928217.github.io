@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>angular基础2 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="jqLite 自定义指令1234567myApp.directive(&apos;myDir&apos;,[function()&amp;#123;   link:function()&amp;#123;       return &amp;#123;       &amp;#125;   &amp;#125;   &amp;#125;])">
+<meta name="keywords" content="angular,框架">
+<meta property="og:type" content="article">
+<meta property="og:title" content="angular基础2">
+<meta property="og:url" content="http://yoursite.com/2015/11/02/angular鍩虹2/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="jqLite 自定义指令1234567myApp.directive(&apos;myDir&apos;,[function()&amp;#123;   link:function()&amp;#123;       return &amp;#123;       &amp;#125;   &amp;#125;   &amp;#125;])">
+<meta property="og:updated_time" content="2017-08-16T10:24:40.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="angular基础2">
+<meta name="twitter:description" content="jqLite 自定义指令1234567myApp.directive(&apos;myDir&apos;,[function()&amp;#123;   link:function()&amp;#123;       return &amp;#123;       &amp;#125;   &amp;#125;   &amp;#125;])">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-angular鍩虹2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/11/02/angular鍩虹2/" class="article-date">
+  <time datetime="2015-11-02T04:49:47.000Z" itemprop="datePublished">2015-11-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      angular基础2
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>jqLite 自定义指令<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">myApp.directive(<span class="string">'myDir'</span>,[<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">   link:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">       <span class="keyword">return</span> &#123;</div><div class="line"></div><div class="line">       &#125;</div><div class="line">   &#125;</div><div class="line">   &#125;])</div></pre></td></tr></table></figure></p>
+</blockquote>
+<a id="more"></a>
+<blockquote>
+<p>Angular’s jqLite</p>
+</blockquote>
+<ul>
+<li>需求：angular虽然不推崇DOM操作 但是谁也保证不了 一点DOM操作都没有</li>
+<li>方案：angular提供了一个简化版本的jq,叫做jqLite.看文档说下面的事情<ul>
+<li>提供了一些和jquery名字一样的方法</li>
+<li>但都是些简化的方法 不拥有完全的功能</li>
+<li>用法上大多一样 不一样的地方官方文档上会有说明</li>
+</ul>
+</li>
+<li>语法：<ul>
+<li>angular.element(原生js对象),将元素转换为jqLite对象<br><code>angular.element(document.getElementById(&#39;box&#39;))</code><br><code>.css({width:&quot;20&quot;,height:&quot;30&quot;})</code></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>自定义指令</p>
+</blockquote>
+<ul>
+<li>需求：angular官方只提供了常用的指令 在实际工作中不够用 所以需要自己定义一些指令实现一些需求  (轮播图 回到顶部 吸顶导航等等)</li>
+<li>方案：通过自定义指令的方式写我们自己的DOM操作</li>
+<li>概念：angular提供给我们的操作DOM的方式</li>
+<li><p>语法：</p>
+<ul>
+<li><p>定义一个最基本的自定义指令,myDir</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">模块对象.directive(<span class="string">'指令名称'</span>,[<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">        <span class="comment">// 指令的具体配置</span></div><div class="line">    &#125;</div><div class="line">&#125;])</div></pre></td></tr></table></figure>
+</li>
+<li><p>指令在HTML中的使用,my-dir</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 指令名称:myBtn --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">my-btn</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>指令的配置参数介绍</p>
+<pre><code>* restrict 自定义指令分类
+    - 属性指令 A attribute
+    - 元素指令 E element
+    - 样式指令 C class
+    - 注释指令 M comment
+    - 默认值是:&apos;AE&apos;
+* template和templateUrl使用方法
+    - template 模板字符串
+    - templateUrl 定义angular模板
+* link函数的作用及参数说明
+    - 作用：写DOM操作的地方
+    - 有三个参数 scope element attributes
+    - scope:类似于$scope 作用范围不同 只针对当前指令生效
+    - element:当前指令所要操作的元素
+    - attributes:当前指令所在标签的属性结合 对象类型
+* replace的作用
+    - 将当前指令所在的标签替换掉
+    - 布尔类型的值 默认是是false 不替换
+* transclude的作用
+    - 如果指令所在标签内部有内容 会将内容保存到ng-transclude中
+    - 然后在模板内将ng-transclude保存的内容写在想要显示的位置即可
+    - 默认值是false 不保存原有内容 也就是直接用模板内容替换原有内容
+</code></pre></li>
+</ul>
+<pre><code><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">.directive(<span class="string">'myDir'</span>,[<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    link:<span class="function"><span class="keyword">function</span>(<span class="params">scrop,element,attributes</span>)</span>&#123;</div><div class="line">        <span class="comment">// link:这个方法是用来DOM操作的，凡是具体的DOM操作都是放在这个函数内部执行</span></div><div class="line">        <span class="comment">// scrop：是当前指令的作用域，用来挂载相关数据</span></div><div class="line">        <span class="comment">// element：当前指令所在的元素，jqLite对象，可以直接使用jqLite提供的方法属性</span></div><div class="line">        <span class="comment">// attributes：当前指令所在元素的属性的集合，对象；并且，如果该元素有H5自定义属性data-，dada-id，则在这个attributes中存在的属性名为id，没有data-</span></div><div class="line">    &#125;,</div><div class="line">    restrict：<span class="string">'AE'</span>,</div><div class="line">    template:<span class="string">'&lt;button ng-transclude&gt;&lt;/button&gt;'</span>,</div><div class="line">    templateUrl:<span class="string">'./tpl/temp1.html'</span>,</div><div class="line">    templateUrl:<span class="string">'templateID'</span>,</div><div class="line">    replace:<span class="literal">true</span>,<span class="comment">//默认值是false，replace，模板的内容是否要将设置自定义指令的元素替换掉</span></div><div class="line">    transclude:<span class="literal">true</span>,<span class="comment">// 默认值false，告诉angular，指令在使用template模板时，指令所在元素内部的内容是否要保留，true就是要保留(这个保留是angular自己开辟一块空间，保存起来),要想保留的内容在页面中显示，还需要在需要模板中，需要显示的位置，加上ng-transclude指令，要保留的内容就会在模板有ng-transclude指令的元素内容</span></div><div class="line"></div><div class="line">    &#125;])</div></pre></td></tr></table></figure>
+</code></pre><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/ng-template"</span> <span class="attr">id</span>=<span class="string">"templateID"</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="xml">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span></div><div class="line"><span class="javascript">        &lt;li&gt;<span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span></div><div class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<ul>
+<li>自定义指令的简写形式<pre><code>* 当定义的指令全部使用默认参数 仅需要一个写DOM操作的地方
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">模块对象.directive(<span class="string">'指令名称'</span>,[<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="comment">// 此处写具体的DOM操作</span></div><div class="line">    &#125;</div><div class="line">&#125;])</div></pre></td></tr></table></figure>
+</code></pre></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/11/02/angular鍩虹2/" data-id="cj6gduoon0007ysnt2qc23pc7" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angular/">angular</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/框架/">框架</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/05/27/npm浣跨敤/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Récent</strong>
+      <div class="article-nav-title">
+        
+          gulp的使用
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/11/01/angular鍩虹1/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ancien</strong>
+      <div class="article-nav-title">angular基础1</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Mot-clés</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CKeditor/">CKeditor</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/">Javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ajax/">ajax</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/angular/">angular</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/form-validate/">form-validate</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jquery/">jquery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/">npm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具/">工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/插件/">插件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/框架/">框架</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/模板引擎/">模板引擎</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/进度条/">进度条</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/CKeditor/" style="font-size: 10px;">CKeditor</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/ajax/" style="font-size: 10px;">ajax</a> <a href="/tags/angular/" style="font-size: 13.33px;">angular</a> <a href="/tags/form-validate/" style="font-size: 10px;">form-validate</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/工具/" style="font-size: 10px;">工具</a> <a href="/tags/插件/" style="font-size: 16.67px;">插件</a> <a href="/tags/框架/" style="font-size: 13.33px;">框架</a> <a href="/tags/模板引擎/" style="font-size: 10px;">模板引擎</a> <a href="/tags/进度条/" style="font-size: 10px;">进度条</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Articles récents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/08/11/ejs妯℃澘寮曟搸/">ejs模板引擎</a>
+          </li>
+        
+          <li>
+            <a href="/2016/12/01/webpack/">webpack</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/07/node-js浠嬬粛/">node.js介绍</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/06/template妯℃澘寮曟搸/">template模板引擎</a>
+          </li>
+        
+          <li>
+            <a href="/2016/09/26/CKeditor/">CKeditor富文本插件</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

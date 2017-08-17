@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>jsonp实现原理+3种跨域解决方案 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1.jsonp,实现跨域 原理：1、浏览器的同源策略，使用XMLHTTPRequest对象进行的跨域请求会被浏览器默认截断。  同源：协议+域名+端口，三者完全一致为同源  https://www.baidu.com:8080/home/index.html?key1=value1&amp;amp;key2=value2#hash  https:协议  www.baidu.com:域名  8080:端口">
+<meta name="keywords" content="Javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jsonp实现原理+3种跨域解决方案">
+<meta property="og:url" content="http://yoursite.com/2015/04/03/ajax/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1.jsonp,实现跨域 原理：1、浏览器的同源策略，使用XMLHTTPRequest对象进行的跨域请求会被浏览器默认截断。  同源：协议+域名+端口，三者完全一致为同源  https://www.baidu.com:8080/home/index.html?key1=value1&amp;amp;key2=value2#hash  https:协议  www.baidu.com:域名  8080:端口">
+<meta property="og:image" content="http://yoursite.com/2015/04/03/ajax/assets/blogImg/域名.png">
+<meta property="og:image" content="http://yoursite.com/2015/04/03/ajax/assets/blogImg/location.png">
+<meta property="og:updated_time" content="2017-07-23T00:46:06.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="jsonp实现原理+3种跨域解决方案">
+<meta name="twitter:description" content="1.jsonp,实现跨域 原理：1、浏览器的同源策略，使用XMLHTTPRequest对象进行的跨域请求会被浏览器默认截断。  同源：协议+域名+端口，三者完全一致为同源  https://www.baidu.com:8080/home/index.html?key1=value1&amp;amp;key2=value2#hash  https:协议  www.baidu.com:域名  8080:端口">
+<meta name="twitter:image" content="http://yoursite.com/2015/04/03/ajax/assets/blogImg/域名.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-ajax" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/04/03/ajax/" class="article-date">
+  <time datetime="2015-04-03T15:14:00.000Z" itemprop="datePublished">2015-04-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      jsonp实现原理+3种跨域解决方案
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>1.jsonp,实现跨域</p>
+<p>原理：<br>1、浏览器的同源策略，使用XMLHTTPRequest对象进行的跨域请求会被浏览器默认截断。<br>  同源：协议+域名+端口，三者完全一致为同源<br>  <a href="https://www.baidu.com:8080/home/index.html?key1=value1&amp;key2=value2#hash" target="_blank" rel="external">https://www.baidu.com:8080/home/index.html?key1=value1&amp;key2=value2#hash</a><br>  https:协议<br>  www.baidu.com:域名<br>  8080:端口号<br>  home/index:路径<br>  ?key=value:参数</p>
+<p>  #hash:哈希值<br>2、html的一些标签中src属性也可以发送请求，相当于发送了一个get请求。而src属性中书写的地址，发送出去的请求，是不会受到浏览器截断的<br>3、动态生成一个script标签，将这个script标签的src属性的值设为请求的URL，将这个script标签添加到页面中之后，src属性会自动向URL发送一个get请求，然后，后台返回一段特殊格式的字符串，返回到页面中，这段字符串就变成了一段函数调用的js代码.</p>
+</blockquote>
+<p><img src="assets/blogImg/域名.png" alt="域名"></p>
+<p><img src="assets/blogImg/location.png" alt="location"></p>
+<a id="more"></a>
+<p>这个函数在请求之前就在全局创建好，那么请求完成之后，会自动调用这个函数。就类似于请求的成功的回调函数了！</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">ajax</span>(<span class="params">url,callback</span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> cbName = <span class="string">"jsonp"</span>+(<span class="keyword">new</span> <span class="built_in">Date</span>()<span class="number">-0</span>)+<span class="built_in">parseInt</span>(<span class="built_in">Math</span>.random()*<span class="number">1000000</span>);</div><div class="line">    <span class="built_in">window</span>[cbName]=callback;</div><div class="line"></div><div class="line">    <span class="keyword">var</span> script = <span class="built_in">document</span>.createElement(<span class="string">"script"</span>);</div><div class="line">    script.src=url+<span class="string">"?callback="</span>+cbName;</div><div class="line">    <span class="built_in">document</span>.body.appendChild(script);</div><div class="line">&#125;</div><div class="line"><span class="comment">// 在html页面中生成了这样一个标签：</span></div><div class="line"><span class="comment">// &lt;script src="ajax.api.php?callback=jsonp2546235766344312"&gt;&lt;/script&gt;</span></div><div class="line"><span class="comment">// 浏览器向服务器自动发送了一个get请求，文件地址是：ajax.api.php   发送的数据：callback=cbName变量的值</span></div></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;?php</span></div><div class="line">    header(<span class="string">"Content-type:application/json;charset=utf-8"</span>);</div><div class="line">    $cbName=$_GET[<span class="string">"callback"</span>];</div><div class="line">    <span class="keyword">echo</span> $cbName.<span class="string">"(&#123;‘name’:'syf','job':'teacher'&#125;)"</span>;</div><div class="line">    <span class="comment">//这个php代码，由于发送ajax请求，需要返回数据，这里就就是返回的数据，返回到html中渲染的代码就是：</span></div><div class="line">    &lt;script&gt;</div><div class="line">        jsonp2546235766344312(&#123;‘name’:<span class="string">'syf'</span>,<span class="string">'job'</span>:<span class="string">'teacher'</span>&#125;);</div><div class="line">    &lt;/script&gt;</div><div class="line">    <span class="comment">// 函数调用</span></div><div class="line"><span class="meta">?&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ajax(<span class="string">"https://api.ajax.com/data.php"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(data);</div><div class="line">    &#125;)</div></pre></td></tr></table></figure>
+<blockquote>
+<ol>
+<li>给当前请求的这个数据地址，加一个响应头(不安全)</li>
+</ol>
+</blockquote>
+<p>  header(Access-Control-Allow-Orign:<a href="http://ajax.com" target="_blank" rel="external">http://ajax.com</a>)<br>  浏览器在检测到跨域请求时，会2次请求。<br>  第一次：向数据地址发送请求，预请求，是否有权限。<br>  如返回有权限，则<br>  第二次：向数据服务器发送拿数据的请求</p>
+<blockquote>
+<ol>
+<li>反向代理(增加web服务器的压力)</li>
+</ol>
+</blockquote>
+<p>将发送给数据服务器的请求，发送给同源的web网页服务器，由网页服务器向数据服务器发送请求，在将收到的响应数据发送给浏览器<br>step1：配置http.conf文件<br>LoadModule proxy-module modules/mod-proxy.so<br>LoadModule proxy-http-module modules/mod-proxy.so<br>这2行前面的#去掉<br>step2：在httpd-vhosts.config文件中，添加<br>    ProxyRequests off        正向代理 关闭<br>    ProxyPass /api <a href="http://api.botue.com/v3" target="_blank" rel="external">http://api.botue.com/v3</a><br>            本域名路径   远程路径<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;VirtualHost *:80&gt;</div><div class="line">    ServerName study.com</div><div class="line">    DocumentRoot &quot;/Applications/XAMPP/xamppfiles/htdocs/study&quot;</div><div class="line">    ProxyRequests off</div><div class="line">    ProxyPass /api http://api.botue.com/v3</div><div class="line">    &lt;Directory &quot;/Applications/XAMPP/xamppfiles/htdocs/study/&quot;&gt;</div><div class="line">        Options Indexes FollowSymLinks</div><div class="line">        AllowOverride All</div><div class="line">        Require local</div><div class="line">    &lt;/Directory&gt;</div><div class="line">&lt;/VirtualHost&gt;</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/04/03/ajax/" data-id="cj6gduood0001ysnt58nohimi" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Javascript/">Javascript</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/04/26/姝ｅ垯鍩虹/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Récent</strong>
+      <div class="article-nav-title">
+        
+          正则基础
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/03/14/http鍗忚+cookie+session/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ancien</strong>
+      <div class="article-nav-title">http协议+cookie+session</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Mot-clés</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CKeditor/">CKeditor</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/">Javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ajax/">ajax</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/angular/">angular</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/form-validate/">form-validate</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jquery/">jquery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/">npm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具/">工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/插件/">插件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/框架/">框架</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/模板引擎/">模板引擎</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/进度条/">进度条</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/CKeditor/" style="font-size: 10px;">CKeditor</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/ajax/" style="font-size: 10px;">ajax</a> <a href="/tags/angular/" style="font-size: 13.33px;">angular</a> <a href="/tags/form-validate/" style="font-size: 10px;">form-validate</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/工具/" style="font-size: 10px;">工具</a> <a href="/tags/插件/" style="font-size: 16.67px;">插件</a> <a href="/tags/框架/" style="font-size: 13.33px;">框架</a> <a href="/tags/模板引擎/" style="font-size: 10px;">模板引擎</a> <a href="/tags/进度条/" style="font-size: 10px;">进度条</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Articles récents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/08/11/ejs妯℃澘寮曟搸/">ejs模板引擎</a>
+          </li>
+        
+          <li>
+            <a href="/2016/12/01/webpack/">webpack</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/07/node-js浠嬬粛/">node.js介绍</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/06/template妯℃澘寮曟搸/">template模板引擎</a>
+          </li>
+        
+          <li>
+            <a href="/2016/09/26/CKeditor/">CKeditor富文本插件</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
